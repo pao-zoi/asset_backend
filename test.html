@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acta de Transferencia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .section-content {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        strong {
+            color: #222;
+        }
+        .table-container {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Acta de Transferencia</h1>
+        
+        <div class="section">
+            <div class="section-title">Detalles de la Transferencia</div>
+            <div class="section-content">
+                <p><strong>Fecha:</strong> [Fecha de transferencia]</p>
+                <p><strong>Responsable Emisor:</strong> [Nombre del responsable emisor]</p>
+                <p><strong>Responsable Receptor:</strong> [Nombre del responsable receptor]</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Descripción de los Elementos Transferidos</div>
+            <div class="section-content">
+                <p>[Descripción detallada de los elementos transferidos]</p>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Activo</th>
+                            <th>Descripción</th>
+                            <th>Cargo</th>
+                            <th>Ubicación</th>
+                            <th>Valor Unitario</th>
+                        </tr>
+        
+                        ${generateAssetRows.join('')}
+                        
+                        <tr>
+                          <td colspan="3"><b> Total de activos asignados ${length} </b></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" >
+            <div class="section-title">Firma y Aprobación</div>
+            <div class="section-content" style="display: flex; flex-direction: row; justify-content: center;">
+                <div style="margin-right: 20px;">
+                    <br>
+                    <p>______________________</p>
+                    <p><strong>Firma Emisor: </strong> ABC</p>
+
+                </div>
+                <div style="margin-right: 20px;">
+                    <br>
+                    <p>______________________</p>
+                    <p><strong>Firma Receptor: </strong>  ABC</p>
+
+                </div>
+                <div>
+                    <br>
+                    <p>______________________</p>
+                    <p><strong>Aprobado por: </strong> ABC</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
